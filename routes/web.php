@@ -11,12 +11,12 @@
 |
 */
 Route::get('/test', function () {
-    return view('test');
+    return view('beranda/home');
 });
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('lomba/ctf');
 });
 
 Auth::routes();

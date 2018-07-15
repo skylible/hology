@@ -1,8 +1,8 @@
 <?php
 
-namespace Hology\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Hology\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -21,19 +21,13 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
      * Create a new controller instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->redirectTo = config('quickadmin.route');
+        $this->middleware('guest', ['except' => 'logout']);
     }
 }

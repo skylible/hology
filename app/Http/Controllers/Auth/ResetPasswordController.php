@@ -1,8 +1,8 @@
 <?php
 
-namespace Hology\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Hology\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
@@ -19,13 +19,6 @@ class ResetPasswordController extends Controller
     */
 
     use ResetsPasswords;
-
-    /**
-     * Where to redirect users after resetting their password.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
